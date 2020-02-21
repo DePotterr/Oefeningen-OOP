@@ -1,0 +1,6 @@
+C:\Users\Robin\Documents\School\Oefeningen OOP\OefAuto\OefAuto\bin\Debug\OefAuto.exe.config
+C:\Users\Robin\Documents\School\Oefeningen OOP\OefAuto\OefAuto\bin\Debug\OefAuto.exe
+C:\Users\Robin\Documents\School\Oefeningen OOP\OefAuto\OefAuto\bin\Debug\OefAuto.pdb
+C:\Users\Robin\Documents\School\Oefeningen OOP\OefAuto\OefAuto\obj\Debug\OefAuto.csproj.CoreCompileInputs.cache
+C:\Users\Robin\Documents\School\Oefeningen OOP\OefAuto\OefAuto\obj\Debug\OefAuto.exe
+C:\Users\Robin\Documents\School\Oefeningen OOP\OefAuto\OefAuto\obj\Debug\OefAuto.pdb

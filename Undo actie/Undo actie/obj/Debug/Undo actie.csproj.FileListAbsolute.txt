@@ -1,0 +1,7 @@
+C:\Users\Robin\Documents\School\Oefeningen OOP\Undo actie\Undo actie\bin\Debug\Undo actie.exe.config
+C:\Users\Robin\Documents\School\Oefeningen OOP\Undo actie\Undo actie\bin\Debug\Undo actie.exe
+C:\Users\Robin\Documents\School\Oefeningen OOP\Undo actie\Undo actie\bin\Debug\Undo actie.pdb
+C:\Users\Robin\Documents\School\Oefeningen OOP\Undo actie\Undo actie\obj\Debug\Undo actie.csprojAssemblyReference.cache
+C:\Users\Robin\Documents\School\Oefeningen OOP\Undo actie\Undo actie\obj\Debug\Undo actie.csproj.CoreCompileInputs.cache
+C:\Users\Robin\Documents\School\Oefeningen OOP\Undo actie\Undo actie\obj\Debug\Undo actie.exe
+C:\Users\Robin\Documents\School\Oefeningen OOP\Undo actie\Undo actie\obj\Debug\Undo actie.pdb

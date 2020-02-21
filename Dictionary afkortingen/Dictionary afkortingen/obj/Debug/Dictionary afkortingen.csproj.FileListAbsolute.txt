@@ -1,0 +1,7 @@
+C:\Users\Robin\Documents\School\Oefeningen OOP\Dictionary afkortingen\Dictionary afkortingen\bin\Debug\Dictionary afkortingen.exe.config
+C:\Users\Robin\Documents\School\Oefeningen OOP\Dictionary afkortingen\Dictionary afkortingen\bin\Debug\Dictionary afkortingen.exe
+C:\Users\Robin\Documents\School\Oefeningen OOP\Dictionary afkortingen\Dictionary afkortingen\bin\Debug\Dictionary afkortingen.pdb
+C:\Users\Robin\Documents\School\Oefeningen OOP\Dictionary afkortingen\Dictionary afkortingen\obj\Debug\Dictionary afkortingen.csprojAssemblyReference.cache
+C:\Users\Robin\Documents\School\Oefeningen OOP\Dictionary afkortingen\Dictionary afkortingen\obj\Debug\Dictionary afkortingen.csproj.CoreCompileInputs.cache
+C:\Users\Robin\Documents\School\Oefeningen OOP\Dictionary afkortingen\Dictionary afkortingen\obj\Debug\Dictionary afkortingen.exe
+C:\Users\Robin\Documents\School\Oefeningen OOP\Dictionary afkortingen\Dictionary afkortingen\obj\Debug\Dictionary afkortingen.pdb

@@ -1,0 +1,6 @@
+C:\Users\Robin\Documents\School\Oefeningen OOP\Vluchten\Vluchten\bin\Debug\Vluchten.exe.config
+C:\Users\Robin\Documents\School\Oefeningen OOP\Vluchten\Vluchten\bin\Debug\Vluchten.exe
+C:\Users\Robin\Documents\School\Oefeningen OOP\Vluchten\Vluchten\bin\Debug\Vluchten.pdb
+C:\Users\Robin\Documents\School\Oefeningen OOP\Vluchten\Vluchten\obj\Debug\Vluchten.csproj.CoreCompileInputs.cache
+C:\Users\Robin\Documents\School\Oefeningen OOP\Vluchten\Vluchten\obj\Debug\Vluchten.exe
+C:\Users\Robin\Documents\School\Oefeningen OOP\Vluchten\Vluchten\obj\Debug\Vluchten.pdb

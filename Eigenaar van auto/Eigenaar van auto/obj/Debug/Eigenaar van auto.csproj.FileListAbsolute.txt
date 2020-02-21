@@ -1,0 +1,7 @@
+C:\Users\Robin\Documents\School\Oefeningen OOP\Eigenaar van auto\Eigenaar van auto\obj\Debug\Eigenaar van auto.csprojAssemblyReference.cache
+C:\Users\Robin\Documents\School\Oefeningen OOP\Eigenaar van auto\Eigenaar van auto\obj\Debug\Eigenaar van auto.csproj.CoreCompileInputs.cache
+C:\Users\Robin\Documents\School\Oefeningen OOP\Eigenaar van auto\Eigenaar van auto\bin\Debug\Eigenaar van auto.exe.config
+C:\Users\Robin\Documents\School\Oefeningen OOP\Eigenaar van auto\Eigenaar van auto\bin\Debug\Eigenaar van auto.exe
+C:\Users\Robin\Documents\School\Oefeningen OOP\Eigenaar van auto\Eigenaar van auto\bin\Debug\Eigenaar van auto.pdb
+C:\Users\Robin\Documents\School\Oefeningen OOP\Eigenaar van auto\Eigenaar van auto\obj\Debug\Eigenaar van auto.exe
+C:\Users\Robin\Documents\School\Oefeningen OOP\Eigenaar van auto\Eigenaar van auto\obj\Debug\Eigenaar van auto.pdb

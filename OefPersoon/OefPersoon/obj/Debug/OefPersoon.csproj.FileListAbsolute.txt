@@ -1,0 +1,7 @@
+C:\Users\Robin\Documents\School\Oefeningen OOP\OefPersoon\OefPersoon\bin\Debug\OefPersoon.exe.config
+C:\Users\Robin\Documents\School\Oefeningen OOP\OefPersoon\OefPersoon\bin\Debug\OefPersoon.exe
+C:\Users\Robin\Documents\School\Oefeningen OOP\OefPersoon\OefPersoon\bin\Debug\OefPersoon.pdb
+C:\Users\Robin\Documents\School\Oefeningen OOP\OefPersoon\OefPersoon\obj\Debug\OefPersoon.csprojAssemblyReference.cache
+C:\Users\Robin\Documents\School\Oefeningen OOP\OefPersoon\OefPersoon\obj\Debug\OefPersoon.csproj.CoreCompileInputs.cache
+C:\Users\Robin\Documents\School\Oefeningen OOP\OefPersoon\OefPersoon\obj\Debug\OefPersoon.exe
+C:\Users\Robin\Documents\School\Oefeningen OOP\OefPersoon\OefPersoon\obj\Debug\OefPersoon.pdb
