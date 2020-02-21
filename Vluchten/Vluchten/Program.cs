@@ -10,12 +10,8 @@ namespace Vluchten
     {
         static void Main(string[] args)
         {
-            List<Vlucht> vlucht = new List<Vlucht>();
-            vlucht.Add(new Vlucht("B", "f"));
-            Console.WriteLine(vlucht[0]);
-            vlucht.Remove(vlucht[0]);
-            vlucht.Add(new Vlucht("B", "f"));
-            Console.WriteLine(vlucht[0]);
+            Vlucht vlucht = new Vlucht("Brussel", "Dublin");
+            Luchtvaartmaatschappij luchtvaartmaatschappij = new Luchtvaartmaatschappij();
         }
     }
 }

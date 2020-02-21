@@ -11,16 +11,16 @@ namespace Vluchten
         private static int teller = 1;
         public string Vertrek { get; set; }
         public string Bestemming { get; set; }
-        public int Teller { get; set; }
+        public int Vluchtnummer { get; set; }
         public Vlucht(string vertrek, string bestemming)
         {
-            this.Teller = teller++;
+            this.Vluchtnummer = teller++;
             this.Vertrek = vertrek;
             this.Bestemming = bestemming;
         }
         public override string ToString()
         {
-            return this.Teller + "| Vertrek: " + this.Vertrek + " Bestemming: " + this.Bestemming;
+            return this.Vluchtnummer + "| Vertrek: " + this.Vertrek + " Bestemming: " + this.Bestemming;
         }
     }
 }
