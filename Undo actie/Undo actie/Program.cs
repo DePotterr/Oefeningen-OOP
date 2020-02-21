@@ -10,34 +10,66 @@ namespace Undo_actie
     {
         static void Main(string[] args)
         {
-            List<string> letters = new List<string>();
-            string letter = "";
-            string tempory;
-            do
+            //List<string> letters = new List<string>();
+            char letter;
+            Stack<char> letters = new Stack<char>();
+            while (true)
             {
-                tempory = Console.ReadLine();
-                if(tempory != "")
+                try
                 {
-                    letter = tempory;
-                }
+                    // LIST
+                    //Console.Write("Voer een letter in: ");
+                    //letter = Console.ReadLine();
+                    //if (letter.Length > 0 && letter.Length < 2)
+                    //{
+                    //    if(letter != "Z" && letter != null && letter != " ")
+                    //    {
+                    //        letters.Add(letter);
+                    //    }
+                    //    else if(letter == "Z")
+                    //    {
+                    //        letters.RemoveAt(letters.Count() - 1);
+                    //    }
+                    //}
+                    //Console.WriteLine();
+                    //Console.WriteLine("Letters in lijst: ");
+                    //for (int i = 0; i < letters.Count; i++)
+                    //{
+                    //    Console.WriteLine(letters[i]);
+                    //}
+                    //Console.WriteLine();
 
-                if (letter != "Z" && letter.Length > 0 && letter.Length < 2)
-                {
-                    letters.Add(letter);
+                    Console.Write("Voer een letter in: ");
+                    letter = char.Parse(Console.ReadLine());
+                    if (char.IsLetter(letter) && letter != 'Z')
+                    {
+                        letters.Push(letter);
+                    }
+                    else if (letter == 'Z')
+                    {
+                        letters.Pop();
+                    }
+                    Console.WriteLine(letters.Peek());
                 }
+                catch(InvalidOperationException)
+                {
+                    Console.WriteLine("Kan actie niet uitvoeren.");
+                    Console.WriteLine("Stack is leeg of verkeerde invoer.");
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Gelieve een letter in te geven.");
+                }
+                //catch (ArgumentOutOfRangeException)
+                //{
+                //    //    Console.WriteLine("\nGeen undo meer mogelijk!\n");
+                //}
+                catch (Exception)
+                {
+                    Console.WriteLine("\nEr is iets misgegaan!\n");
+                }
+            }
 
-                else if (letter.Length > 0 && letter.Length < 2)
-                {
-                    letters.RemoveAt(letters.Count - 1);
-                }
-                Console.WriteLine();
-                Console.WriteLine("Letters in lijst: "); 
-                for (int i = 0; i < letters.Count; i++)
-                {
-                    Console.WriteLine(letters[i]);
-                }
-                Console.WriteLine();
-            } while (letters.Count > 0);
         }
     }
 }
