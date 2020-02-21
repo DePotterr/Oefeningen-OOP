@@ -11,7 +11,13 @@ namespace Vluchten
         static void Main(string[] args)
         {
             Vlucht vlucht = new Vlucht("Brussel", "Dublin");
-            Luchtvaartmaatschappij luchtvaartmaatschappij = new Luchtvaartmaatschappij();
+            Vlucht vlucht1 = new Vlucht("Antwerpen", "Dublin");
+            Luchtvaartmaatschappij luchtvaartmaatschappij = new Luchtvaartmaatschappij("Brussels Airlines");
+            luchtvaartmaatschappij.AddVlucht(vlucht);
+            Console.WriteLine(luchtvaartmaatschappij);
+            luchtvaartmaatschappij.AddVlucht(vlucht1);
+            Console.WriteLine(luchtvaartmaatschappij);
+
         }
     }
 }

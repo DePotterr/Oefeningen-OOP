@@ -20,7 +20,7 @@ namespace Vluchten
         }
         public override string ToString()
         {
-            return this.Vluchtnummer + "| Vertrek: " + this.Vertrek + " Bestemming: " + this.Bestemming;
+            return "Vertrek: " + this.Vertrek + " Bestemming: " + this.Bestemming;
         }
     }
 }
