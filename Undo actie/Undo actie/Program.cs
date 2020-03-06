@@ -53,8 +53,7 @@ namespace Undo_actie
                 }
                 catch(InvalidOperationException)
                 {
-                    Console.WriteLine("Kan actie niet uitvoeren.");
-                    Console.WriteLine("Stack is leeg of verkeerde invoer.");
+                    Console.WriteLine("Stack is leeg.");
                 }
                 catch (FormatException)
                 {
