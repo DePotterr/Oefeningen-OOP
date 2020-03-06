@@ -9,74 +9,77 @@ namespace IMDB
     class Film
     {
         const int DEFAULT_RATING = 5;
+
         public enum Gernes { Action, Drama, Horror, Family, Kids}
         public string Title { get; set; }
         public string Producer { get; set; }
         public string Director { get; set; }
         public Gernes Gerne { get; set; }
-        public List<int> Rating;
-        public List<Acteur> Acteurs;
+        private List<int> ratings;
+        private List<Acteur> acteurs;
 
-        public Film(string title, string producer, string director, Gernes gerne, int rating)
+        public Film(string title, string producer, string director, Gernes gerne)
         {
-            Rating = new List<int>();
-            Acteurs = new List<Acteur>();
+            ratings = new List<int>();
+            acteurs = new List<Acteur>();
             Title = title;
             Producer = producer;
             Director = director;
             Gerne = gerne;
-            AddRating(rating);
         }
 
-        public Film(string title, string producer, string director, Gernes gerne) : this(title, producer, director, gerne, DEFAULT_RATING)
-        {
-        }
+        //public Film(string title, string producer, string director, Gernes gerne) : this(title, producer, director, gerne)
+        //{
+        //}
 
         public void AddRating(int rating)
         {
-            try
+            if (rating > 0 && rating <= 5)
             {
-                if (rating > 0 && rating <= 5)
-                {
-                    Rating.Add(rating);
-                }
+                ratings.Add(rating);
             }
-            catch (Exception)
+            else
             {
-                Console.WriteLine("Fout.");
+                throw new Exception("Foute rating");
             }
-
         }
 
         public void AddActor(Acteur actor)
         {
-            try
+            if (actor != null)
             {
-                if (actor != null)
-                {
-                    this.Acteurs.Add(actor);
-                }
+                this.acteurs.Add(actor);
             }
-            catch (Exception)
-            {
-                Console.WriteLine("Fout.");
-            }
-
         }
 
-        private int GemRating()
+        private double GemRating()
         {
-            int result = 0;
-            int aantal = 0;
-            foreach (int rating in Rating)
+            int totalRatings = 0;
+            int aantal = ratings.Count;
+            ratings.Sort();
+
+            //1 hoogste en 1 laagste wegvallen
+            // let op: volgorde van lijst 3 2 5 1 2
+            if (aantal > 2)
             {
-                if (rating != 5 || rating != 1)
+                for (int i = 1; i < aantal - 1; i++)
                 {
-                    result += rating;
-                    aantal++;
+                    totalRatings += ratings[i];
                 }
             }
-            return result / aantal;
+            else if (aantal <= 2 && aantal > 0)
+            {
+                for (int i = 0; i < aantal; i++)
+                {
+                    totalRatings += ratings[i];
+                }
+            }
+            else
+            {
+                throw new DivideByZeroException("Er zijn nog geen ratings");
+            }
+            return totalRatings / aantal;
+
         }
 
         public override string ToString()

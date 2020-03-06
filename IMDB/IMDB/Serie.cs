@@ -11,13 +11,13 @@ namespace IMDB
         const int DEFAULT_RATING = 5;
         public string Titel { get; set; }
         public int AantalSeizoenen { get; set; }
-        public List<int> Rating;
-        public List<Acteur> Acteurs;
+        private List<int> ratings;
+        private List<Acteur> acteurs;
 
         public Serie(string titel, int aantalSeizoenen, int rating)
         {
-            Rating = new List<int>();
-            Acteurs = new List<Acteur>();
+            ratings = new List<int>();
+            acteurs = new List<Acteur>();
             Titel = titel;
             AantalSeizoenen = aantalSeizoenen;
             AddRating(rating);
@@ -30,7 +30,7 @@ namespace IMDB
         {
             if (rating > 0 && rating <= 5)
             {
-                this.Rating.Add(rating);
+                this.ratings.Add(rating);
             }
         }
 
@@ -38,23 +38,38 @@ namespace IMDB
         {
             if (actor != null)
             {
-                this.Acteurs.Add(actor);
+                this.acteurs.Add(actor);
             }
         }
 
-        private int GemRating()
+        private double GemRating()
         {
-            int result = 0;
-            int aantal = 0;
-            foreach(int rating in Rating)
+            int totalRatings = 0;
+            int aantal = ratings.Count;
+            ratings.Sort();
+
+            //1 hoogste en 1 laagste wegvallen
+            // let op: volgorde van lijst 3 2 5 1 2
+            if (aantal > 2)
             {
-                if(rating != 5 || rating != 1)
+                for (int i = 1; i < aantal - 1; i++)
                 {
-                    result += rating;
-                    aantal++;
+                    totalRatings += ratings[i];
                 }
             }
-            return result / aantal;
+            else if (aantal < 2 && aantal > 0)
+            {
+                for (int i = 0; i < aantal; i++)
+                {
+                    totalRatings += ratings[i];
+                }
+            }
+            else
+            {
+                throw new DivideByZeroException("Er zijn nog geen ratings");
+            }
+            return totalRatings / aantal;
+
         }
 
         public override string ToString()

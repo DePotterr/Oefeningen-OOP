@@ -8,16 +8,37 @@ namespace IMDB
 {
     class Program
     {
+        static private void WriteException(Exception e)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(e.Message);
+            Console.ResetColor();
+        }
         static void Main(string[] args)
         {
-            Film Avengers = new Film("Avengers", "?", "?", Film.Gernes.Action);
-            Console.WriteLine(Avengers);
-            Avengers.AddRating(2);
-            Console.WriteLine(Avengers);
-            Serie HIMYM = new Serie("How I met your mother", 9);
-            Console.WriteLine(HIMYM);
-            KeyValuePair<int,string> keyValuePair = new KeyValuePair<int, string>(1,"a");
-            Console.WriteLine(keyValuePair);
+            Film avengers = new Film("Avengers", "?", "?", Film.Gernes.Action);
+            
+            try
+            {
+                
+                Console.WriteLine(avengers);
+                
+                
+            }
+            catch (Exception e)
+            {
+                WriteException(e);
+            }
+            avengers.AddRating(1);
+            try
+            {
+                Console.WriteLine(avengers);
+            }
+            catch (Exception e)
+            {
+                WriteException(e);
+            }
+            
         }
     }
 }
