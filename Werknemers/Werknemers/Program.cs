@@ -11,7 +11,7 @@ namespace Werknemers
         static void Main(string[] args)
         {
             Persoon p = new Persoon("r", "d");
-            Werknemer w = new Werknemer(p);
+            Werknemer w = new Werknemer(p,2,Werknemer.Prestaties.Voldoende);
             Console.WriteLine(w);
         }
     }
