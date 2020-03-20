@@ -12,44 +12,54 @@ namespace Simpele_bankrekening
 {
     public partial class Bank : Form
     {
-        Bankrekening Bankrekening = new Bankrekening("Robin",500);
+        Rekening bankrekening = new Rekening(500,DateTime.Today,123456);
+        Klant klant = new Klant("Robin", "Glazenleeuwstraat", 44, "9120", "Beveren");
         public Bank()
         {
             InitializeComponent();
             Bedragweergeven();
             Naamweergeven();
+            errorLabel.Hide();
         }
-
-        private void OverschrijvenButton_Click(object sender, EventArgs e)
+        private void BevestigButton_Click(object sender, EventArgs e)
         {
-            Bankrekening.Toevoegen(bedragNumericUpDown.Value);
-            Bedragweergeven();
-        }
-
-        private void OpvragenButton_Click(object sender, EventArgs e)
-        {
-            if(Bankrekening.Rekening - bedragNumericUpDown.Value > 0)
+            int getal = 0;
+            try
             {
-                Bankrekening.Afnemen(bedragNumericUpDown.Value);
+                getal = int.Parse(bedragTextbox.Text);
+            }
+            catch
+            {
+                errorLabel.Text = "Gelieve een getal in te geven.";
+            }
+            if (bankrekening.Saldo + getal > 0)
+            {
+
+                bankrekening.GeldSotrtenOfAfhalen(getal);
                 Bedragweergeven();
             }
             else
             {
-                Bankrekening.Rekening = 0;
+                bankrekening.Saldo = 0;
                 Bedragweergeven();
-                Popup popup = new Popup();
-                popup.ShowDialog();
+                errorLabel.Text = "Bankrekening staat op 0.";
+                errorLabel.Show();
+
             }
         }
-
         public void Bedragweergeven()
         {
-            walletLabel.Text = "Portemonnee: " + Bankrekening.Rekening;
+            walletLabel.Text = "Portemonnee: " + bankrekening.Saldo;
         }
 
         public void Naamweergeven()
         {
-            naamLabel.Text = "Naam: " + Bankrekening.NaamHouder;
+            naamLabel.Text = "Naam: " + klant.Naam;
+        }
+
+        private void Bank_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

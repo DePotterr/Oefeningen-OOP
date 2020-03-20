@@ -29,87 +29,77 @@
         private void InitializeComponent()
         {
             this.walletLabel = new System.Windows.Forms.Label();
-            this.overschrijvenButton = new System.Windows.Forms.Button();
-            this.opvragenButton = new System.Windows.Forms.Button();
-            this.bedragNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.bevestigButton = new System.Windows.Forms.Button();
             this.naamLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.bedragNumericUpDown)).BeginInit();
+            this.errorLabel = new System.Windows.Forms.Label();
+            this.bedragTextbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // walletLabel
             // 
             this.walletLabel.AutoSize = true;
-            this.walletLabel.Location = new System.Drawing.Point(24, 24);
+            this.walletLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.walletLabel.Location = new System.Drawing.Point(11, 38);
+            this.walletLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.walletLabel.Name = "walletLabel";
-            this.walletLabel.Size = new System.Drawing.Size(93, 17);
+            this.walletLabel.Size = new System.Drawing.Size(129, 25);
             this.walletLabel.TabIndex = 0;
             this.walletLabel.Text = "Portomonnee";
             // 
-            // overschrijvenButton
+            // bevestigButton
             // 
-            this.overschrijvenButton.Location = new System.Drawing.Point(276, 214);
-            this.overschrijvenButton.Name = "overschrijvenButton";
-            this.overschrijvenButton.Size = new System.Drawing.Size(123, 44);
-            this.overschrijvenButton.TabIndex = 2;
-            this.overschrijvenButton.Text = "Overschrijven";
-            this.overschrijvenButton.UseVisualStyleBackColor = true;
-            this.overschrijvenButton.Click += new System.EventHandler(this.OverschrijvenButton_Click);
-            // 
-            // opvragenButton
-            // 
-            this.opvragenButton.Location = new System.Drawing.Point(414, 214);
-            this.opvragenButton.Name = "opvragenButton";
-            this.opvragenButton.Size = new System.Drawing.Size(123, 44);
-            this.opvragenButton.TabIndex = 3;
-            this.opvragenButton.Text = "Opvragen";
-            this.opvragenButton.UseVisualStyleBackColor = true;
-            this.opvragenButton.Click += new System.EventHandler(this.OpvragenButton_Click);
-            // 
-            // bedragNumericUpDown
-            // 
-            this.bedragNumericUpDown.Location = new System.Drawing.Point(345, 177);
-            this.bedragNumericUpDown.Maximum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.bedragNumericUpDown.Minimum = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.bedragNumericUpDown.Name = "bedragNumericUpDown";
-            this.bedragNumericUpDown.Size = new System.Drawing.Size(120, 22);
-            this.bedragNumericUpDown.TabIndex = 4;
-            this.bedragNumericUpDown.Value = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
+            this.bevestigButton.Location = new System.Drawing.Point(237, 179);
+            this.bevestigButton.Margin = new System.Windows.Forms.Padding(2);
+            this.bevestigButton.Name = "bevestigButton";
+            this.bevestigButton.Size = new System.Drawing.Size(92, 36);
+            this.bevestigButton.TabIndex = 2;
+            this.bevestigButton.Text = "Overschrijven/ Afhalen";
+            this.bevestigButton.UseVisualStyleBackColor = true;
+            this.bevestigButton.Click += new System.EventHandler(this.BevestigButton_Click);
             // 
             // naamLabel
             // 
             this.naamLabel.AutoSize = true;
-            this.naamLabel.Location = new System.Drawing.Point(352, 23);
+            this.naamLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.naamLabel.Location = new System.Drawing.Point(11, 9);
+            this.naamLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.naamLabel.Name = "naamLabel";
-            this.naamLabel.Size = new System.Drawing.Size(45, 17);
+            this.naamLabel.Size = new System.Drawing.Size(77, 29);
             this.naamLabel.TabIndex = 5;
             this.naamLabel.Text = "Naam";
             // 
+            // errorLabel
+            // 
+            this.errorLabel.AutoSize = true;
+            this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorLabel.Location = new System.Drawing.Point(192, 265);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(184, 31);
+            this.errorLabel.TabIndex = 6;
+            this.errorLabel.Text = "ErrorMessage";
+            // 
+            // bedragTextbox
+            // 
+            this.bedragTextbox.Location = new System.Drawing.Point(237, 154);
+            this.bedragTextbox.Name = "bedragTextbox";
+            this.bedragTextbox.Size = new System.Drawing.Size(92, 20);
+            this.bedragTextbox.TabIndex = 7;
+            // 
             // Bank
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.bedragTextbox);
+            this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.naamLabel);
-            this.Controls.Add(this.bedragNumericUpDown);
-            this.Controls.Add(this.opvragenButton);
-            this.Controls.Add(this.overschrijvenButton);
+            this.Controls.Add(this.bevestigButton);
             this.Controls.Add(this.walletLabel);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Bank";
             this.Text = "Rekening";
-            ((System.ComponentModel.ISupportInitialize)(this.bedragNumericUpDown)).EndInit();
+            this.Load += new System.EventHandler(this.Bank_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,10 +108,10 @@
         #endregion
 
         private System.Windows.Forms.Label walletLabel;
-        private System.Windows.Forms.Button overschrijvenButton;
-        private System.Windows.Forms.Button opvragenButton;
-        private System.Windows.Forms.NumericUpDown bedragNumericUpDown;
+        private System.Windows.Forms.Button bevestigButton;
         private System.Windows.Forms.Label naamLabel;
+        private System.Windows.Forms.Label errorLabel;
+        private System.Windows.Forms.TextBox bedragTextbox;
     }
 }
 
