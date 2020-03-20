@@ -10,7 +10,8 @@ namespace Festival
     {
         static void Main(string[] args)
         {
-            Festivalganger festivalganger = new Festivalganger(DateTime.Today, "Beveren", "OLF Beveren", "Robin", "de Potter", "Beveren", Artiest.StijlenMuziek.Dance, 18, false);
+            Evenement evenement = new Evenement(DateTime.Today.AddDays(5),"Beveren","OLF BEVEREN", 500);
+            Festivalganger festivalganger = new Festivalganger("Robin", "de Potter", "Beveren",18, false, evenement);
             Console.WriteLine(festivalganger);
         }
     }

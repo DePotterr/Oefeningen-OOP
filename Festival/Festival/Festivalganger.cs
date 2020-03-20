@@ -6,31 +6,34 @@ using System.Threading.Tasks;
 
 namespace Festival
 {
-    class Festivalganger : Artiest
+    class Festivalganger : Persoon
     {
         public const double KORTING = 0.5;
         public int Leeftijd { get; set; }
         public double Inkomstprijs { get; set; }
         public bool Handicap { get; set; }
         public string Woonplaats { get; set; }
-        public Festivalganger(DateTime datumEvenement, string plaatsEvenement, string naamEvenement, string voornaam, string achternaam, string woonplaats , StijlenMuziek stijlenMuziek, int leeftijd, bool handicap) : base(voornaam, achternaam, stijlenMuziek,datumEvenement,plaatsEvenement,naamEvenement)
+        public Evenement MijnFestival { get; set; }
+        public Festivalganger(string voornaam, string achternaam, string woonplaats , int leeftijd, bool handicap, Evenement festival) : base(voornaam, achternaam)
         {
             this.Leeftijd = leeftijd;
             this.Handicap = handicap;
             this.Woonplaats = woonplaats;
+            MijnFestival = festival;
             BerekenInkom();
         }
         private void BerekenInkom()
         {
-            if(base.PlaatsEvenement != this.Woonplaats)
+            double basisprijs = MijnFestival.Inkom;
+            if(MijnFestival.PlaatsEvenement != this.Woonplaats)
             {
                 if (this.Leeftijd > 60 || this.Leeftijd < 25 || this.Handicap)
                 {
-                    this.Inkomstprijs = base.Inkom - (base.Inkom * KORTING);
+                    this.Inkomstprijs = basisprijs - (basisprijs * KORTING);
                 }
                 else
                 {
-                    this.Inkomstprijs = base.Inkom;
+                    this.Inkomstprijs = basisprijs;
                 }
             }
             else

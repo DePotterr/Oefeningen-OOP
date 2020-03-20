@@ -46,6 +46,7 @@
     <Compile Include="Artiest.cs" />
     <Compile Include="Evenement.cs" />
     <Compile Include="Festivalganger.cs" />
+    <Compile Include="Persoon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

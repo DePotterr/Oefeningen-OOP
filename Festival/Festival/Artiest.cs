@@ -6,23 +6,20 @@ using System.Threading.Tasks;
 
 namespace Festival
 {
-    class Artiest : Evenement
+    class Artiest : Persoon
     {
         public enum StijlenMuziek { RNB, Dance, Rock, DNB}
-        public string Voornaam { get; set; }
-        public string Achternaam { get; set; }
+
         public StijlenMuziek StijlMuziek { get; set; }
 
-        public Artiest(string voornaam, string achternaam, StijlenMuziek stijlMuziek, DateTime datumEvenement, string plaatsEvenement, string naamEvenement) : base(datumEvenement, plaatsEvenement, naamEvenement, 500)
+        public Artiest(string voornaam, string achternaam, StijlenMuziek stijlMuziek) : base(voornaam, achternaam)
         {
-            Voornaam = voornaam;
-            Achternaam = achternaam;
             StijlMuziek = stijlMuziek;
         }
 
         public override string ToString()
         {
-            return "Naam: " + this.Voornaam + "\nAchternaam: " + this.Achternaam + "\nStijl muziek: " + this.StijlMuziek;
+            return base.ToString() + "\nStijl muziek: " + this.StijlMuziek;
         }
     }
 }
