@@ -47,7 +47,7 @@ namespace prjBank
         }
         public override string ToString()
         {
-            return "Rekeningnummer: " + this.Rekeningnummer + "\nSaldo: " + this.Saldo + "\nOpeningsdatum: " + this.OpeningsDatum + "\nRekeningsstatus: " + this.Rekeningsstatus;
+            return "\n\t\tRekeningnummer: " + this.Rekeningnummer + "\n\t\tSaldo: " + this.Saldo + "\n\t\tOpeningsdatum: " + this.OpeningsDatum + "\n\t\tRekeningsstatus: " + this.Rekeningsstatus;
         }
     }
 }

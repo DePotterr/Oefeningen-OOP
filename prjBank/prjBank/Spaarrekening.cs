@@ -66,5 +66,9 @@ namespace prjBank
         {
             GetrouwheidDatum = DateTime.Today;
         }
+        public override string ToString()
+        {
+            return base.ToString() + "\n\t\tGetrouwheidDatum: " + this.GetrouwheidDatum;
+        }
     }
 }

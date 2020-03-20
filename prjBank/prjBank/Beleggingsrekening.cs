@@ -48,5 +48,9 @@ namespace prjBank
                 base.GeldAfhalen(bedrag);
             }
         }
+        public override string ToString()
+        {
+            return base.ToString() + "\n\t\tVervalDatum: " + this.VervalDatum;
+        }
     }
 }

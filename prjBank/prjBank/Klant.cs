@@ -8,6 +8,7 @@ namespace prjBank
 {
     class Klant
     {
+        private static int klantennummer = 1;
         private string postcode;
 
         public string Naam { get; set; }
@@ -32,6 +33,7 @@ namespace prjBank
         public string Gemeente { get; set; }
         public List<Spaarrekening> Spaarrekeningen { get; set; }
         public List<Beleggingsrekening> Beleggingsrekeningen { get; set; }
+        public int Klantennummer { get; set; }
         public Klant(string naam, string straat, int huisnummer, string postcode, string gemeente)
         {
             Naam = naam;
@@ -41,6 +43,7 @@ namespace prjBank
             Gemeente = gemeente;
             this.Spaarrekeningen = new List<Spaarrekening>();
             this.Beleggingsrekeningen = new List<Beleggingsrekening>();
+            Klantennummer = klantennummer++;
         }
 
         public int TelLetters(string woord)
@@ -54,8 +57,34 @@ namespace prjBank
         }
         public override string ToString()
         {
-            string adres = "\n\t\t" + this.Straat + " nr: " + this.Huisnummer;
-            return "\n\t\tNaam klant:" + this.Naam + adres + "\n\t\tPostcode: " + this.Postcode + "\n\t\tGemeente: " + this.Gemeente + "\n\t\tSpaarrekeningen: " + this.Spaarrekeningen + "\n\t\tBeleggingsrekeningen: " + this.Beleggingsrekeningen;
+            string spaarrekeningen = "";
+            string beleggingsrekening = "";
+            if(this.Spaarrekeningen.Count > 0)
+            {
+                for (int i = 0; i < this.Spaarrekeningen.Count; i++)
+                {
+                    spaarrekeningen += this.Spaarrekeningen[i];
+                }
+            }
+            else
+            {
+                beleggingsrekening = "Er zijn nog geen spaarrekeningen.";
+            }
+
+            if (this.Beleggingsrekeningen.Count > 0)
+            {
+                for (int i = 0; i < this.Beleggingsrekeningen.Count; i++)
+                {
+                    beleggingsrekening += this.Beleggingsrekeningen[i];
+                }
+            }
+            else
+            {
+                beleggingsrekening = "Er zijn nog geen beleggingsrekeningen.";
+            }
+
+            string adres = "\n\t" + this.Straat + " nr: " + this.Huisnummer;
+            return "\n\tKlantennummer: " + this.Klantennummer + "\n\tNaam klant:" + this.Naam + adres + "\n\tPostcode: " + this.Postcode + "\n\tGemeente: " + this.Gemeente + "\n\tSpaarrekeningen: " + spaarrekeningen + "\n\tBeleggingsrekeningen: " + beleggingsrekening + "\n";
         }
     }
 }
