@@ -21,27 +21,36 @@ namespace Simpele_bankrekening
             RekeningOpenen();
         }
 
-        public virtual void GeldAfhalen(double bedrag)
+        public virtual bool GeldAfhalen(double bedrag)
         {
+            bool gelukt = false;
             if (bedrag <= 500 && bedrag >= 20)
             {
                 this.Saldo -= bedrag;
+                gelukt = true;
             }
+            return gelukt;
         }
-        public virtual void GeldStorten(double bedrag)
+        public virtual bool GeldStorten(double bedrag)
         {
+            bool gelukt = false;
             if (bedrag <= 500 && bedrag >= 20)
             {
                 this.Saldo += bedrag;
+                gelukt = true;
             }
+            return gelukt;
         }
 
-        public virtual void GeldSotrtenOfAfhalen(double bedrag)
+        public virtual bool GeldSotrtenOfAfhalen(double bedrag)
         {
-            if(bedrag <= 500 && bedrag >= 20 || bedrag >= -500 && bedrag <= -20)
+            bool gelukt = false;
+            if (bedrag <= 500 && bedrag >= 20 || bedrag >= -500 && bedrag <= -20)
             {
                 this.Saldo += bedrag;
+                gelukt = true;
             }
+            return gelukt;
         }
         public void RekeningOpenen()
         {

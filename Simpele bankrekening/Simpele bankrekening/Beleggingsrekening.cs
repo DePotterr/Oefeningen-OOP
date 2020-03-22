@@ -34,26 +34,35 @@ namespace Simpele_bankrekening
             }
         }
 
-        public override void GeldStorten(double bedrag)
+        public override bool GeldStorten(double bedrag)
         {
+            bool bl = false;
             if (ValideerVervalDatum())
             {
                 base.GeldStorten(bedrag);
+                bl =  true;
             }
+            return bl;
         }
-        public override void GeldAfhalen(double bedrag)
+        public override bool GeldAfhalen(double bedrag)
         {
+            bool bl = false;
             if (ValideerVervalDatum())
             {
                 base.GeldAfhalen(bedrag);
+                bl = true;
             }
+            return bl;
         }
-        public override void GeldSotrtenOfAfhalen(double bedrag)
+        public override bool GeldSotrtenOfAfhalen(double bedrag)
         {
+            bool bl = false;
             if (ValideerVervalDatum())
             {
                 base.GeldSotrtenOfAfhalen(bedrag);
+                bl = true;
             }
+            return bl;
         }
         public override string ToString()
         {

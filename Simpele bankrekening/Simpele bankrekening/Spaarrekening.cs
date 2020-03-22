@@ -50,21 +50,21 @@ namespace Simpele_bankrekening
             return intrest;
         }
 
-        public override void GeldStorten(double bedrag)
+        public override bool GeldStorten(double bedrag)
         {
-            base.GeldStorten(bedrag);
             SetGetrouwheidDatumVandaag();
+            return base.GeldStorten(bedrag);
         }
 
-        public override void GeldAfhalen(double bedrag)
+        public override bool GeldAfhalen(double bedrag)
         {
-            base.GeldAfhalen(bedrag);
             SetGetrouwheidDatumVandaag();
+            return base.GeldAfhalen(bedrag);
         }
-        public override void GeldSotrtenOfAfhalen(double bedrag)
+        public override bool GeldSotrtenOfAfhalen(double bedrag)
         {
-            base.GeldSotrtenOfAfhalen(bedrag);
             SetGetrouwheidDatumVandaag();
+            return base.GeldSotrtenOfAfhalen(bedrag);
         }
         public void SetGetrouwheidDatumVandaag()
         {

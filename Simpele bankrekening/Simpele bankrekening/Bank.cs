@@ -14,12 +14,13 @@ namespace Simpele_bankrekening
     {
         Rekening bankrekening = new Rekening(500,DateTime.Today,123456);
         Klant klant = new Klant("Robin", "Glazenleeuwstraat", 44, "9120", "Beveren");
+        public bool transactieGelukt = false;
         public Bank()
         {
             InitializeComponent();
             Bedragweergeven();
             Naamweergeven();
-            errorLabel.Hide();
+            messageLabel.Hide();
         }
         private void BevestigButton_Click(object sender, EventArgs e)
         {
@@ -30,22 +31,37 @@ namespace Simpele_bankrekening
             }
             catch
             {
-                errorLabel.Text = "Gelieve een getal in te geven.";
+                messageLabel.Text = "Gelieve een getal in te geven.";
+                messageLabel.Show();
             }
-            if (bankrekening.Saldo + getal > 0)
+            if (bankrekening.Saldo + getal >= 0)
             {
-
-                bankrekening.GeldSotrtenOfAfhalen(getal);
+                messageLabel.Hide();
+                transactieGelukt = bankrekening.GeldSotrtenOfAfhalen(getal);
+                if (transactieGelukt)
+                {
+                    messageLabel.Text = "Transactie gelukt!";
+                }
+                else
+                {
+                    messageLabel.Text = "Transactie mislukt.";
+                }
                 Bedragweergeven();
+                messageLabel.Show();
+            }
+            else if (bankrekening.Saldo != 0)
+            {
+                Bedragweergeven();
+                messageLabel.Text = "Te weinig saldo om af te halen.";
+                messageLabel.Show();
             }
             else
             {
-                bankrekening.Saldo = 0;
                 Bedragweergeven();
-                errorLabel.Text = "Bankrekening staat op 0.";
-                errorLabel.Show();
-
+                messageLabel.Text = "Bankrekening staat op 0.";
+                messageLabel.Show();
             }
+
         }
         public void Bedragweergeven()
         {
