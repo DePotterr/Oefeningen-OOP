@@ -29,7 +29,7 @@ namespace Werknemers
         {
         }
 
-        private double CalculateSalary(DateTime testMoment)
+        public double CalculateSalary(DateTime testMoment)
         {
             if (Prestaties.Voldoende == this.Prestatie)
             {
@@ -42,7 +42,7 @@ namespace Werknemers
             }
         }
 
-        private double CalculateSalary()
+        public double CalculateSalary()
         {
             return CalculateSalary(DateTime.Today);
         }
