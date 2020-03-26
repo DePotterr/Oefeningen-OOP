@@ -13,7 +13,7 @@ namespace Simpele_bankrekening
     public partial class Bank : Form
     {
         Rekening bankrekening = new Rekening(500, DateTime.Today, 123456);
-        Klant klant = new Klant("Robin", "Glazenleeuwstraat", 44, "9120", "Beveren");
+        Klant klant = new Klant("Een naam", "een straat", 9, "2000", "Een gemeente");
         bool transactieGelukt = false;
         public Bank()
         {
