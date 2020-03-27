@@ -28,16 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.serieFilmComboBox = new System.Windows.Forms.ComboBox();
-            this.filmButton = new System.Windows.Forms.Button();
-            this.filmTextBoc = new System.Windows.Forms.TextBox();
-            this.filmLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ratingTextBoc = new System.Windows.Forms.TextBox();
-            this.serieLabel = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.serieButton = new System.Windows.Forms.Button();
+            this.filmSerieLabel = new System.Windows.Forms.Label();
+            this.naamTextBox = new System.Windows.Forms.TextBox();
+            this.toevoegenButton = new System.Windows.Forms.Button();
             this.ratingButton = new System.Windows.Forms.Button();
+            this.filmRadioButton = new System.Windows.Forms.RadioButton();
+            this.SerieRadioButton = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ratingComboBox = new System.Windows.Forms.ComboBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // serieFilmComboBox
@@ -47,33 +50,6 @@
             this.serieFilmComboBox.Name = "serieFilmComboBox";
             this.serieFilmComboBox.Size = new System.Drawing.Size(121, 24);
             this.serieFilmComboBox.TabIndex = 0;
-            // 
-            // filmButton
-            // 
-            this.filmButton.Location = new System.Drawing.Point(47, 253);
-            this.filmButton.Name = "filmButton";
-            this.filmButton.Size = new System.Drawing.Size(121, 23);
-            this.filmButton.TabIndex = 1;
-            this.filmButton.Text = "Toevoegen";
-            this.filmButton.UseVisualStyleBackColor = true;
-            this.filmButton.Click += new System.EventHandler(this.FilmButton_Click);
-            // 
-            // filmTextBoc
-            // 
-            this.filmTextBoc.Location = new System.Drawing.Point(47, 225);
-            this.filmTextBoc.Name = "filmTextBoc";
-            this.filmTextBoc.Size = new System.Drawing.Size(121, 22);
-            this.filmTextBoc.TabIndex = 2;
-            // 
-            // filmLabel
-            // 
-            this.filmLabel.AutoSize = true;
-            this.filmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.filmLabel.Location = new System.Drawing.Point(12, 159);
-            this.filmLabel.Name = "filmLabel";
-            this.filmLabel.Size = new System.Drawing.Size(187, 29);
-            this.filmLabel.TabIndex = 3;
-            this.filmLabel.Text = "Film toevoegen";
             // 
             // label1
             // 
@@ -85,39 +61,32 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Rating toevoegen";
             // 
-            // ratingTextBoc
+            // filmSerieLabel
             // 
-            this.ratingTextBoc.Location = new System.Drawing.Point(550, 253);
-            this.ratingTextBoc.Name = "ratingTextBoc";
-            this.ratingTextBoc.Size = new System.Drawing.Size(121, 22);
-            this.ratingTextBoc.TabIndex = 5;
+            this.filmSerieLabel.AutoSize = true;
+            this.filmSerieLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filmSerieLabel.Location = new System.Drawing.Point(173, 159);
+            this.filmSerieLabel.Name = "filmSerieLabel";
+            this.filmSerieLabel.Size = new System.Drawing.Size(144, 29);
+            this.filmSerieLabel.TabIndex = 8;
+            this.filmSerieLabel.Text = "film of serie";
             // 
-            // serieLabel
+            // naamTextBox
             // 
-            this.serieLabel.AutoSize = true;
-            this.serieLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.serieLabel.Location = new System.Drawing.Point(269, 159);
-            this.serieLabel.Name = "serieLabel";
-            this.serieLabel.Size = new System.Drawing.Size(197, 29);
-            this.serieLabel.TabIndex = 8;
-            this.serieLabel.Text = "Serie toevoegen";
+            this.naamTextBox.Location = new System.Drawing.Point(178, 223);
+            this.naamTextBox.Name = "naamTextBox";
+            this.naamTextBox.Size = new System.Drawing.Size(121, 22);
+            this.naamTextBox.TabIndex = 7;
             // 
-            // textBox2
+            // toevoegenButton
             // 
-            this.textBox2.Location = new System.Drawing.Point(304, 225);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 22);
-            this.textBox2.TabIndex = 7;
-            // 
-            // serieButton
-            // 
-            this.serieButton.Location = new System.Drawing.Point(304, 253);
-            this.serieButton.Name = "serieButton";
-            this.serieButton.Size = new System.Drawing.Size(121, 23);
-            this.serieButton.TabIndex = 6;
-            this.serieButton.Text = "Toevoegen";
-            this.serieButton.UseVisualStyleBackColor = true;
-            this.serieButton.Click += new System.EventHandler(this.SerieButton_Click);
+            this.toevoegenButton.Location = new System.Drawing.Point(178, 251);
+            this.toevoegenButton.Name = "toevoegenButton";
+            this.toevoegenButton.Size = new System.Drawing.Size(121, 23);
+            this.toevoegenButton.TabIndex = 6;
+            this.toevoegenButton.Text = "Toevoegen";
+            this.toevoegenButton.UseVisualStyleBackColor = true;
+            this.toevoegenButton.Click += new System.EventHandler(this.ToevoegenButton_Click);
             // 
             // ratingButton
             // 
@@ -129,23 +98,70 @@
             this.ratingButton.UseVisualStyleBackColor = true;
             this.ratingButton.Click += new System.EventHandler(this.RatingButton_Click);
             // 
+            // filmRadioButton
+            // 
+            this.filmRadioButton.AutoSize = true;
+            this.filmRadioButton.Location = new System.Drawing.Point(11, 15);
+            this.filmRadioButton.Name = "filmRadioButton";
+            this.filmRadioButton.Size = new System.Drawing.Size(54, 21);
+            this.filmRadioButton.TabIndex = 10;
+            this.filmRadioButton.TabStop = true;
+            this.filmRadioButton.Text = "Film";
+            this.filmRadioButton.UseVisualStyleBackColor = true;
+            this.filmRadioButton.CheckedChanged += new System.EventHandler(this.CheckedChanged);
+            // 
+            // SerieRadioButton
+            // 
+            this.SerieRadioButton.AutoSize = true;
+            this.SerieRadioButton.Location = new System.Drawing.Point(11, 42);
+            this.SerieRadioButton.Name = "SerieRadioButton";
+            this.SerieRadioButton.Size = new System.Drawing.Size(62, 21);
+            this.SerieRadioButton.TabIndex = 11;
+            this.SerieRadioButton.TabStop = true;
+            this.SerieRadioButton.Text = "Serie";
+            this.SerieRadioButton.UseVisualStyleBackColor = true;
+            this.SerieRadioButton.CheckedChanged += new System.EventHandler(this.CheckedChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.filmRadioButton);
+            this.panel1.Controls.Add(this.SerieRadioButton);
+            this.panel1.Location = new System.Drawing.Point(370, 62);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(76, 81);
+            this.panel1.TabIndex = 12;
+            // 
+            // ratingComboBox
+            // 
+            this.ratingComboBox.FormattingEnabled = true;
+            this.ratingComboBox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.ratingComboBox.Location = new System.Drawing.Point(550, 251);
+            this.ratingComboBox.Name = "ratingComboBox";
+            this.ratingComboBox.Size = new System.Drawing.Size(121, 24);
+            this.ratingComboBox.TabIndex = 13;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ratingComboBox);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.ratingButton);
-            this.Controls.Add(this.serieLabel);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.serieButton);
-            this.Controls.Add(this.ratingTextBoc);
+            this.Controls.Add(this.filmSerieLabel);
+            this.Controls.Add(this.naamTextBox);
+            this.Controls.Add(this.toevoegenButton);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.filmLabel);
-            this.Controls.Add(this.filmTextBoc);
-            this.Controls.Add(this.filmButton);
             this.Controls.Add(this.serieFilmComboBox);
             this.Name = "Dashboard";
             this.Text = "Bioscoop";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,15 +170,16 @@
         #endregion
 
         private System.Windows.Forms.ComboBox serieFilmComboBox;
-        private System.Windows.Forms.Button filmButton;
-        private System.Windows.Forms.TextBox filmTextBoc;
-        private System.Windows.Forms.Label filmLabel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox ratingTextBoc;
-        private System.Windows.Forms.Label serieLabel;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button serieButton;
+        private System.Windows.Forms.Label filmSerieLabel;
+        private System.Windows.Forms.TextBox naamTextBox;
+        private System.Windows.Forms.Button toevoegenButton;
         private System.Windows.Forms.Button ratingButton;
+        private System.Windows.Forms.RadioButton filmRadioButton;
+        private System.Windows.Forms.RadioButton SerieRadioButton;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox ratingComboBox;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
