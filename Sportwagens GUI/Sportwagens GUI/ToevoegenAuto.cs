@@ -8,6 +8,8 @@ namespace Sportwagens_GUI
     {
         List<Sportwagen> sportwagens = new List<Sportwagen>();
         List<Gezinswagen> gezinswagens = new List<Gezinswagen>();
+        List<Sportwagen> verwijderenSportwagens = new List<Sportwagen>();
+        List<Gezinswagen> verwijderenGezinswagen = new List<Gezinswagen>();
         bool isSport;
         public ToevoegenAuto()
         {
@@ -16,16 +18,8 @@ namespace Sportwagens_GUI
         private void ToevoegenAuto_Load(object sender, EventArgs e)
         {
             HideAllElements();
-            merkComboBox.Items.Add(Wagen.Merken.BMW);
-            merkComboBox.Items.Add(Wagen.Merken.Ford);
-            merkComboBox.Items.Add(Wagen.Merken.Mercedes);
-            merkComboBox.Items.Add(Wagen.Merken.Peugeot);
-            merkComboBox.Items.Add(Wagen.Merken.Toyota);
-            merkComboBox.Items.Add(Wagen.Merken.Volvo);
-            typeComboBox.Items.Add(Wagen.Types.AMG);
-            typeComboBox.Items.Add(Wagen.Types.GT);
-            typeComboBox.Items.Add(Wagen.Types.Mustang);
-            typeComboBox.Items.Add(Wagen.Types.Yaris);
+            merkComboBox.DataSource = Enum.GetValues(typeof(Wagen.Merken));
+            typeComboBox.DataSource = Enum.GetValues(typeof(Wagen.Types));
             IGDDateTimePicker.MaxDate = DateTime.Today;
             IGDDateTimePicker.MinDate = DateTime.Today.AddYears(-200);
             merkComboBox.SelectedItem = Wagen.Merken.BMW;
@@ -131,12 +125,12 @@ namespace Sportwagens_GUI
 
         private void VerwijderenButton_Click(object sender, EventArgs e)
         {
+            listView1.Items.Clear();
             for (int i = 0; i < gezinswagens.Count; i++)
             {
                 if(gezinswagens[i].Nummerplaat == verwijderenNummerplaatTextBox.Text)
                 {
-                    gezinswagens.RemoveAt(i);
-                    listView1.Items.RemoveAt(i);
+                    verwijderenGezinswagen.Add(gezinswagens[i]);
                 }
             }
 
@@ -144,9 +138,28 @@ namespace Sportwagens_GUI
             {
                 if (sportwagens[i].Nummerplaat == verwijderenNummerplaatTextBox.Text)
                 {
-                    sportwagens.RemoveAt(i);
-                    listView1.Items.RemoveAt(i);
+                    verwijderenSportwagens.Add(sportwagens[i]);
                 }
+            }
+
+            for (int i = 0; i < verwijderenGezinswagen.Count; i++)
+            {
+                gezinswagens.Remove(verwijderenGezinswagen[i]);
+            }
+
+            for (int i = 0; i < verwijderenSportwagens.Count; i++)
+            {
+                sportwagens.Remove(verwijderenSportwagens[i]);
+            }
+
+            for (int i = 0; i < gezinswagens.Count; i++)
+            {
+                listView1.Items.Add(gezinswagens[i].ToString());
+            }
+
+            for (int i = 0; i < sportwagens.Count; i++)
+            {
+                listView1.Items.Add(sportwagens[i].ToString());
             }
         }
     }
