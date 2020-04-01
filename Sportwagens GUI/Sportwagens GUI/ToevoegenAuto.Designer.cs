@@ -178,6 +178,7 @@
             this.nummerplaatTextBox.Name = "nummerplaatTextBox";
             this.nummerplaatTextBox.Size = new System.Drawing.Size(121, 22);
             this.nummerplaatTextBox.TabIndex = 11;
+//            this.nummerplaatTextBox.TextChanged += new System.EventHandler(this.NummerplaatTextBox_TextChanged);
             // 
             // nummerplaatLabel
             // 

@@ -16,7 +16,40 @@ namespace Sportwagens_GUI
         public Types Type { get; set; }
         public int KmTeller { get; set; }
         public DateTime InGebruikDatum { get; set; }
-        public string Nummerplaat { get; set; }
+        private string nummerplaat;
+
+        public string Nummerplaat
+        {
+            get { return nummerplaat; }
+            set
+            {
+                if(value.Length >= 6 && value.Length <= 9)
+                {
+                    if (value[1] != '-')
+                    {
+                        value = value.Insert(1, "-");
+                    }
+                    if (value[5] != '-')
+                    {
+                        value = value.Insert(5, "-");
+                    }
+                    if(value.Length == 9)
+                    {
+                        nummerplaat = value;
+                    }
+                    else{
+                        value = "fout!";
+                    }
+                }
+                else
+                {
+                    value = "fout!";
+                }
+                value = value.ToUpper();
+                nummerplaat = value;
+            }
+        }
+
         public double Brandstofverbruik { get; set; }
 
         public Wagen(Merken merk, Types type, int kmTeller, DateTime inGebruikDatum, string nummerplaat)

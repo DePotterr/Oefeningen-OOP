@@ -8,8 +8,6 @@ namespace Sportwagens_GUI
     {
         List<Sportwagen> sportwagens = new List<Sportwagen>();
         List<Gezinswagen> gezinswagens = new List<Gezinswagen>();
-        List<Sportwagen> verwijderenSportwagens = new List<Sportwagen>();
-        List<Gezinswagen> verwijderenGezinswagen = new List<Gezinswagen>();
         bool isSport;
         public ToevoegenAuto()
         {
@@ -125,6 +123,8 @@ namespace Sportwagens_GUI
 
         private void VerwijderenButton_Click(object sender, EventArgs e)
         {
+            List<Sportwagen> verwijderenSportwagens = new List<Sportwagen>();
+            List<Gezinswagen> verwijderenGezinswagen = new List<Gezinswagen>();
             listView1.Items.Clear();
             for (int i = 0; i < gezinswagens.Count; i++)
             {
@@ -162,5 +162,18 @@ namespace Sportwagens_GUI
                 listView1.Items.Add(sportwagens[i].ToString());
             }
         }
+
+        //private void NummerplaatTextBox_TextChanged(object sender, EventArgs e)
+        //{
+        //    if (nummerplaatTextBox.Text.Length == 2)
+        //    {
+        //        if (nummerplaatTextBox.Text[1] != '-')
+        //        {
+        //            nummerplaatTextBox.Text = nummerplaatTextBox.Text.Insert(1, "-");
+        //            nummerplaatTextBox.Select();
+        //        }
+        //    }
+
+        //}
     }
 }
