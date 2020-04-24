@@ -8,13 +8,18 @@ namespace Stofwinkel
 {
     class Stretchstoffen : Stof
     {
+        string ticket;
         public double Stretchpercentage { get; set; }
         public bool InDroogkast { get; set; }
 
         public Stretchstoffen(string naam, string designLabel, double prijsPerMeter, double krimpPercentage, Kwaliteitlabels kwaliteitlabel,double stretchpercentage, bool inDroogkast) : base(naam, designLabel, prijsPerMeter, krimpPercentage, kwaliteitlabel)
         {
-            Stretchpercentage = stretchpercentage;
+            base.Ticket += $" {stretchpercentage}";
             InDroogkast = inDroogkast;
+        }
+        public string Knippen()
+        {
+            return "Knippen";
         }
         public override string ToString()
         {

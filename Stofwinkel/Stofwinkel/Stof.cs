@@ -14,9 +14,11 @@ namespace Stofwinkel
         public double PrijsPerMeter { get; set; }
         public double KrimpPercentage { get; set; }
         public Kwaliteitlabels Kwaliteitlabel { get; set; }
+        public string Ticket { get; set; }
 
         public Stof(string naam, string designLabel, double prijsPerMeter, double krimpPercentage, Kwaliteitlabels kwaliteitlabel)
         {
+            Ticket = $"{naam} {designLabel} {prijsPerMeter}";
             Naam = naam;
             DesignLabel = designLabel;
             PrijsPerMeter = prijsPerMeter;

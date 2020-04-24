@@ -11,7 +11,25 @@ namespace Stofwinkel
         public bool IsBio { get; set; }
         public Katoenenstoffen(string naam, string designLabel, double prijsPerMeter, double krimpPercentage, Kwaliteitlabels kwaliteitlabel, bool isBio) : base(naam, designLabel, prijsPerMeter, krimpPercentage, kwaliteitlabel)
         {
+            base.Ticket += $" {GetTextBio(IsBio)}";
             IsBio = isBio;
+        }
+        public string Scheuren()
+        {
+            return "Scheuren";
+        }
+        private string GetTextBio(bool bio)
+        {
+            string tekst = "Stof is niet Bio";
+            if (bio)
+            {
+                tekst = "Stof is Bio";
+            }
+            return tekst;
+        }
+        public override string ToString()
+        {
+            return base.ToString() + "aanduiding bio: " + GetTextBio(IsBio);
         }
     }
 }
