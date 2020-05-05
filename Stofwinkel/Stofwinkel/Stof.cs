@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Stofwinkel
 {
-    enum Kwaliteitlabels { A, B, C }
-    class Stof
+    public enum Kwaliteitlabels { A, B, C }
+    public abstract class Stof
     {
         public string Naam { get; set; }
         public string DesignLabel { get; set; }

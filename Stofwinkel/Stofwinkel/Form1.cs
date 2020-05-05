@@ -19,7 +19,7 @@ namespace Stofwinkel
         {
             InitializeComponent();
             kwaliteitsComboBox.DataSource = Enum.GetValues(typeof(Kwaliteitlabels));
-            stoffenListBox.DataSource = stofWinkel.Stoffen;
+            //stoffenListBox.DataSource = stofWinkel.Stoffen; 
         }
 
         private void CheckedChanged(object sender, EventArgs e)
@@ -45,7 +45,12 @@ namespace Stofwinkel
                 bioCheckBox.Enabled = false;
             }
         }
+        private void InputLeegmaken()
+        {
+            naamTextbox.Clear();
+            designlabelTextbox.Clear();
 
+        }
         private void ToevoegenButton_Click(object sender, EventArgs e)
         {
             if (isKatoen)
@@ -53,8 +58,9 @@ namespace Stofwinkel
                 try
                 {
                     stofWinkel.StofToevoegen(new Katoenenstoffen(naamTextbox.Text, designlabelTextbox.Text, (double)PrijsPerMeternumericUpDown.Value, (double)krimpPerNumericUpDown.Value, (Kwaliteitlabels)kwaliteitsComboBox.SelectedItem, bioCheckBox.Checked));
-                    stoffenListBox.DataSource = stofWinkel.Stoffen;
-                    MessageBox.Show("Katoenstof is toegevoegd.");
+                    stoffenListBox.Items.Add(naamTextbox.Text);//hier zal je enkel de naam van uw stof weergeven. De rest (inclusief de naam) heb reeds aan uw lijst toegevoegd
+                    InputLeegmaken();
+                    MessageBox.Show(stofWinkel.Stoffen[stofWinkel.Stoffen.Count - 1].ToString(),"Katoenstof is toegevoegd.");
                 }
                 catch (Exception ex)
                 {
@@ -66,7 +72,8 @@ namespace Stofwinkel
                 try
                 {
                     stofWinkel.StofToevoegen(new Stretchstoffen(naamTextbox.Text, designlabelTextbox.Text, (double)PrijsPerMeternumericUpDown.Value, (double)krimpPerNumericUpDown.Value, (Kwaliteitlabels)kwaliteitsComboBox.SelectedItem, (double)stretchPercNumericUpDown.Value, droogkastCheckBox.Checked));
-                    stoffenListBox.DataSource = stofWinkel.Stoffen;
+                    stoffenListBox.Items.Add(naamTextbox.Text);
+                    InputLeegmaken();
                     MessageBox.Show("Stretchstof is toegevoegd.");
                 }
                 catch (Exception ex)

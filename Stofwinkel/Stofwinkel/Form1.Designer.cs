@@ -104,23 +104,21 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 424);
+            this.panel1.Size = new System.Drawing.Size(234, 424);
             this.panel1.TabIndex = 2;
             // 
             // stoffenListBox
             // 
             this.stoffenListBox.FormattingEnabled = true;
             this.stoffenListBox.ItemHeight = 16;
-            this.stoffenListBox.Items.AddRange(new object[] {
-            "ssdfsdf"});
             this.stoffenListBox.Location = new System.Drawing.Point(12, 80);
             this.stoffenListBox.Name = "stoffenListBox";
-            this.stoffenListBox.Size = new System.Drawing.Size(170, 244);
+            this.stoffenListBox.Size = new System.Drawing.Size(207, 244);
             this.stoffenListBox.TabIndex = 4;
             // 
             // toevoegenButton
             // 
-            this.toevoegenButton.Location = new System.Drawing.Point(41, 377);
+            this.toevoegenButton.Location = new System.Drawing.Point(58, 377);
             this.toevoegenButton.Name = "toevoegenButton";
             this.toevoegenButton.Size = new System.Drawing.Size(118, 35);
             this.toevoegenButton.TabIndex = 3;
@@ -136,7 +134,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 74);
+            this.panel2.Size = new System.Drawing.Size(234, 74);
             this.panel2.TabIndex = 2;
             // 
             // panel3
@@ -150,9 +148,9 @@
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(200, 0);
+            this.panel3.Location = new System.Drawing.Point(234, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(749, 424);
+            this.panel3.Size = new System.Drawing.Size(715, 424);
             this.panel3.TabIndex = 3;
             // 
             // panel10
@@ -163,14 +161,14 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 318);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(749, 103);
+            this.panel10.Size = new System.Drawing.Size(715, 103);
             this.panel10.TabIndex = 7;
             // 
             // bioCheckBox
             // 
             this.bioCheckBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bioCheckBox.AutoSize = true;
-            this.bioCheckBox.Location = new System.Drawing.Point(324, 30);
+            this.bioCheckBox.Location = new System.Drawing.Point(307, 30);
             this.bioCheckBox.Name = "bioCheckBox";
             this.bioCheckBox.Size = new System.Drawing.Size(50, 21);
             this.bioCheckBox.TabIndex = 1;
@@ -181,7 +179,7 @@
             // 
             this.droogkastCheckBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.droogkastCheckBox.AutoSize = true;
-            this.droogkastCheckBox.Location = new System.Drawing.Point(324, 3);
+            this.droogkastCheckBox.Location = new System.Drawing.Point(307, 3);
             this.droogkastCheckBox.Name = "droogkastCheckBox";
             this.droogkastCheckBox.Size = new System.Drawing.Size(95, 21);
             this.droogkastCheckBox.TabIndex = 1;
@@ -196,13 +194,13 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 265);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(749, 53);
+            this.panel9.Size = new System.Drawing.Size(715, 53);
             this.panel9.TabIndex = 6;
             // 
             // stretchPercNumericUpDown
             // 
             this.stretchPercNumericUpDown.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.stretchPercNumericUpDown.Location = new System.Drawing.Point(324, 25);
+            this.stretchPercNumericUpDown.Location = new System.Drawing.Point(307, 25);
             this.stretchPercNumericUpDown.Name = "stretchPercNumericUpDown";
             this.stretchPercNumericUpDown.Size = new System.Drawing.Size(120, 22);
             this.stretchPercNumericUpDown.TabIndex = 1;
@@ -211,7 +209,7 @@
             // 
             this.stretchPercLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.stretchPercLabel.AutoSize = true;
-            this.stretchPercLabel.Location = new System.Drawing.Point(321, 5);
+            this.stretchPercLabel.Location = new System.Drawing.Point(304, 5);
             this.stretchPercLabel.Name = "stretchPercLabel";
             this.stretchPercLabel.Size = new System.Drawing.Size(129, 17);
             this.stretchPercLabel.TabIndex = 0;
@@ -224,14 +222,14 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 212);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(749, 53);
+            this.panel8.Size = new System.Drawing.Size(715, 53);
             this.panel8.TabIndex = 5;
             // 
             // kwaliteitsComboBox
             // 
             this.kwaliteitsComboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.kwaliteitsComboBox.FormattingEnabled = true;
-            this.kwaliteitsComboBox.Location = new System.Drawing.Point(324, 24);
+            this.kwaliteitsComboBox.Location = new System.Drawing.Point(307, 24);
             this.kwaliteitsComboBox.Name = "kwaliteitsComboBox";
             this.kwaliteitsComboBox.Size = new System.Drawing.Size(121, 24);
             this.kwaliteitsComboBox.TabIndex = 6;
@@ -240,7 +238,7 @@
             // 
             this.kwaliteitsLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.kwaliteitsLabel.AutoSize = true;
-            this.kwaliteitsLabel.Location = new System.Drawing.Point(321, 4);
+            this.kwaliteitsLabel.Location = new System.Drawing.Point(304, 4);
             this.kwaliteitsLabel.Name = "kwaliteitsLabel";
             this.kwaliteitsLabel.Size = new System.Drawing.Size(96, 17);
             this.kwaliteitsLabel.TabIndex = 0;
@@ -253,13 +251,13 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 159);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(749, 53);
+            this.panel7.Size = new System.Drawing.Size(715, 53);
             this.panel7.TabIndex = 4;
             // 
             // krimpPerNumericUpDown
             // 
             this.krimpPerNumericUpDown.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.krimpPerNumericUpDown.Location = new System.Drawing.Point(324, 25);
+            this.krimpPerNumericUpDown.Location = new System.Drawing.Point(307, 25);
             this.krimpPerNumericUpDown.Name = "krimpPerNumericUpDown";
             this.krimpPerNumericUpDown.Size = new System.Drawing.Size(120, 22);
             this.krimpPerNumericUpDown.TabIndex = 1;
@@ -268,7 +266,7 @@
             // 
             this.krimpPerLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.krimpPerLabel.AutoSize = true;
-            this.krimpPerLabel.Location = new System.Drawing.Point(321, 5);
+            this.krimpPerLabel.Location = new System.Drawing.Point(304, 5);
             this.krimpPerLabel.Name = "krimpPerLabel";
             this.krimpPerLabel.Size = new System.Drawing.Size(120, 17);
             this.krimpPerLabel.TabIndex = 0;
@@ -281,13 +279,13 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 106);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(749, 53);
+            this.panel6.Size = new System.Drawing.Size(715, 53);
             this.panel6.TabIndex = 3;
             // 
             // PrijsPerMeternumericUpDown
             // 
             this.PrijsPerMeternumericUpDown.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.PrijsPerMeternumericUpDown.Location = new System.Drawing.Point(324, 25);
+            this.PrijsPerMeternumericUpDown.Location = new System.Drawing.Point(307, 25);
             this.PrijsPerMeternumericUpDown.Name = "PrijsPerMeternumericUpDown";
             this.PrijsPerMeternumericUpDown.Size = new System.Drawing.Size(120, 22);
             this.PrijsPerMeternumericUpDown.TabIndex = 1;
@@ -296,7 +294,7 @@
             // 
             this.prijsPerMeterLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.prijsPerMeterLabel.AutoSize = true;
-            this.prijsPerMeterLabel.Location = new System.Drawing.Point(321, 5);
+            this.prijsPerMeterLabel.Location = new System.Drawing.Point(304, 5);
             this.prijsPerMeterLabel.Name = "prijsPerMeterLabel";
             this.prijsPerMeterLabel.Size = new System.Drawing.Size(100, 17);
             this.prijsPerMeterLabel.TabIndex = 0;
@@ -309,13 +307,13 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 53);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(749, 53);
+            this.panel5.Size = new System.Drawing.Size(715, 53);
             this.panel5.TabIndex = 2;
             // 
             // designlabelTextbox
             // 
             this.designlabelTextbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.designlabelTextbox.Location = new System.Drawing.Point(324, 25);
+            this.designlabelTextbox.Location = new System.Drawing.Point(307, 25);
             this.designlabelTextbox.Name = "designlabelTextbox";
             this.designlabelTextbox.Size = new System.Drawing.Size(120, 22);
             this.designlabelTextbox.TabIndex = 1;
@@ -324,7 +322,7 @@
             // 
             this.designLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.designLabel.AutoSize = true;
-            this.designLabel.Location = new System.Drawing.Point(321, 5);
+            this.designLabel.Location = new System.Drawing.Point(304, 5);
             this.designLabel.Name = "designLabel";
             this.designLabel.Size = new System.Drawing.Size(82, 17);
             this.designLabel.TabIndex = 0;
@@ -338,13 +336,13 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(749, 53);
+            this.panel4.Size = new System.Drawing.Size(715, 53);
             this.panel4.TabIndex = 1;
             // 
             // naamTextbox
             // 
             this.naamTextbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.naamTextbox.Location = new System.Drawing.Point(324, 25);
+            this.naamTextbox.Location = new System.Drawing.Point(307, 25);
             this.naamTextbox.MinimumSize = new System.Drawing.Size(120, 22);
             this.naamTextbox.Name = "naamTextbox";
             this.naamTextbox.Size = new System.Drawing.Size(120, 22);
@@ -354,7 +352,7 @@
             // 
             this.naamLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.naamLabel.AutoSize = true;
-            this.naamLabel.Location = new System.Drawing.Point(321, 5);
+            this.naamLabel.Location = new System.Drawing.Point(304, 5);
             this.naamLabel.Name = "naamLabel";
             this.naamLabel.Size = new System.Drawing.Size(45, 17);
             this.naamLabel.TabIndex = 0;
