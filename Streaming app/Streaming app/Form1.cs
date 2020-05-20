@@ -15,6 +15,22 @@ namespace Streaming_app
         public Form1()
         {
             InitializeComponent();
+            List<Media> medias = new List<Media>();
+            medias.Add(new Film("film1"));
+            medias.Add(new Serie("serie1"));
+            medias.Add(new Film("film2"));
+            medias.Add(new Serie("serie2"));
+            medias.Add(new Film("film3"));
+            medias.Add(new Serie("serie3"));
+            medias.Add(new Film("azertyfilm"));
+            medias.Add(new Serie("azertyserie"));
+            medias.Add(new Film("hf"));
+            medias.Add(new Serie("us"));
+            medias.Add(new Film("The Avengers"));
+            medias.Add(new Serie("Breaking Bad"));
+            medias.Sort();
+            listBox1.DataSource = medias;
         }
+
     }
 }

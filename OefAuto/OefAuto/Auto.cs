@@ -13,16 +13,18 @@ namespace OefAuto
         public string Type { get; set; }
         public string Nummerplaat { get; set; }
         public int AantalKilometers { get; set; }
+        public DateTime Ingebruikname { get; set; }
 
-        public Auto(string merk, string type, string nummerplaat, int aantalkilometers)
+        public Auto(string merk, string type, string nummerplaat, int aantalkilometers, DateTime ingebruikname)
         {
             this.Merk = merk;
             this.Type = type;
             this.Nummerplaat = nummerplaat;
             this.AantalKilometers = aantalkilometers;
+            this.Ingebruikname = ingebruikname;
         }
 
-        public Auto() : this("ONBEKEND", "ONBEKEND", "1-AAA-000", 0)
+        public Auto() : this("ONBEKEND", "ONBEKEND", "1-AAA-000", 0, DateTime.Today)
         {}
 
         public int BerekenAantalKilometers(int aantalJaar)

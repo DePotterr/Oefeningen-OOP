@@ -14,12 +14,12 @@ namespace Stofwinkel
     {
         Winkel stofWinkel = new Winkel();
         bool isKatoen;
+
         
         public Form1()
         {
             InitializeComponent();
             kwaliteitsComboBox.DataSource = Enum.GetValues(typeof(Kwaliteitlabels));
-            //stoffenListBox.DataSource = stofWinkel.Stoffen; 
         }
 
         private void CheckedChanged(object sender, EventArgs e)
@@ -51,14 +51,24 @@ namespace Stofwinkel
             designlabelTextbox.Clear();
 
         }
+        private void UpdateListBox()
+        {
+            stoffenListBox.Items.Clear();
+            stofWinkel.Stoffen.Sort();
+            foreach (Stof stof in stofWinkel.Stoffen)
+            {
+                stoffenListBox.Items.Add(stof);
+            }
+        }
         private void ToevoegenButton_Click(object sender, EventArgs e)
         {
             if (isKatoen)
             {
                 try
                 {
-                    stofWinkel.StofToevoegen(new Katoenenstoffen(naamTextbox.Text, designlabelTextbox.Text, (double)PrijsPerMeternumericUpDown.Value, (double)krimpPerNumericUpDown.Value, (Kwaliteitlabels)kwaliteitsComboBox.SelectedItem, bioCheckBox.Checked));
-                    stoffenListBox.Items.Add(naamTextbox.Text);//hier zal je enkel de naam van uw stof weergeven. De rest (inclusief de naam) heb reeds aan uw lijst toegevoegd
+                    Katoenenstoffen katoenenstof = new Katoenenstoffen(naamTextbox.Text, designlabelTextbox.Text, (double)PrijsPerMeternumericUpDown.Value, (double)krimpPerNumericUpDown.Value, (Kwaliteitlabels)kwaliteitsComboBox.SelectedItem, bioCheckBox.Checked);
+                    stofWinkel.StofToevoegen(katoenenstof);
+                    //stoffenListBox.Items.Add(naamTextbox.Text);//hier zal je enkel de naam van uw stof weergeven. De rest (inclusief de naam) heb reeds aan uw lijst toegevoegd
                     InputLeegmaken();
                     MessageBox.Show(stofWinkel.Stoffen[stofWinkel.Stoffen.Count - 1].ToString(),"Katoenstof is toegevoegd.");
                 }
@@ -71,8 +81,9 @@ namespace Stofwinkel
             {
                 try
                 {
-                    stofWinkel.StofToevoegen(new Stretchstoffen(naamTextbox.Text, designlabelTextbox.Text, (double)PrijsPerMeternumericUpDown.Value, (double)krimpPerNumericUpDown.Value, (Kwaliteitlabels)kwaliteitsComboBox.SelectedItem, (double)stretchPercNumericUpDown.Value, droogkastCheckBox.Checked));
-                    stoffenListBox.Items.Add(naamTextbox.Text);
+                    Stretchstoffen stretchstof = new Stretchstoffen(naamTextbox.Text, designlabelTextbox.Text, (double)PrijsPerMeternumericUpDown.Value, (double)krimpPerNumericUpDown.Value, (Kwaliteitlabels)kwaliteitsComboBox.SelectedItem, (double)stretchPercNumericUpDown.Value, droogkastCheckBox.Checked);
+                    stofWinkel.StofToevoegen(stretchstof);
+                    //stoffenListBox.Items.Add(naamTextbox.Text);
                     InputLeegmaken();
                     MessageBox.Show("Stretchstof is toegevoegd.");
                 }
@@ -81,6 +92,7 @@ namespace Stofwinkel
                     MessageBox.Show(ex.ToString());
                 }
             }
+            UpdateListBox();
         }
     }
 }

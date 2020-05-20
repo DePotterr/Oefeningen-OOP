@@ -33,7 +33,7 @@ namespace Stofwinkel
         public override string ToString()
         {
 
-            return base.ToString() + $" Stretchpercentage: {Stretchpercentage} Aanduiding: {Aanduiding()}";
+            return base.ToString();
         }
     }
 }

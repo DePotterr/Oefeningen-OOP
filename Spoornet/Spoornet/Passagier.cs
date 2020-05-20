@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Spoornet
 {
-    class Passagier
+    class Passagier : IComparable, ICloneable
     {
         public enum Klassen { Eerste_klas, Tweede_klas}
         private string rijkregisternummer;
@@ -19,7 +19,7 @@ namespace Spoornet
             get { return rijkregisternummer; }
             set
             {
-                if (value == String.Format("#.#.# #-#"))
+                if (value == String.Format("#.#.# #-#",value))
                 {
 
                     rijkregisternummer = value;
@@ -43,7 +43,31 @@ namespace Spoornet
         }
         public override string ToString()
         {
-            return Naam + "Klasse: " + Klasse;
+            return VoorNaam + "Klasse: " + Klasse;
+        }
+
+        public int CompareTo(object obj)
+        {
+            if (obj == null)
+                return 1;
+            Passagier passagier = obj as Passagier;
+            if (passagier == null)
+                return 1;
+            int resultPassagier = passagier.VoorNaam.CompareTo(this.VoorNaam);
+            if (resultPassagier != 0)
+            {
+                return resultPassagier;
+            }
+            else
+            {
+                return passagier.Rijkregisternummer.CompareTo(this.Rijkregisternummer);
+            }
+        }
+
+        public object Clone()
+        {
+            Passagier nieuwPassagier = (Passagier)this.MemberwiseClone();
+            return nieuwPassagier;
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Spoornet
 {
     enum Bestemmingen { Brussel_zuid, Antwerpen_centraal, Mechelen}
-    class Trein
+    class Trein : ICloneable, IComparable
     {
         private static int nummer;
         public int Nummer { get; set; }
@@ -35,6 +35,7 @@ namespace Spoornet
             }
             return str;
         }
+
         public virtual void Vertraging(double minuten)
         {
             Tijdstip.AddMinutes(-minuten);
@@ -42,6 +43,28 @@ namespace Spoornet
         public override string ToString()
         {
             return Nummer + " " + Naam + " Bestemming: " + Bestemming + " om: " + Tijdstip;
+        }
+
+        public object Clone()
+        {
+            List<Passagier> nieuwePassagiers = new List<Passagier>();
+            Trein trein = (Trein)this.MemberwiseClone();
+            foreach (Passagier passagier in this.Passagiers)
+            {
+                nieuwePassagiers.Add((Passagier)passagier.Clone());
+            }
+            trein.Passagiers = nieuwePassagiers;
+            return trein;
+        }
+
+        public int CompareTo(object obj)
+        {
+            if (obj == null)
+                return 0;
+            Trein trein = obj as Trein;
+            if (trein == null)
+                return 0;
+            return trein.Naam.CompareTo(this.Naam);
         }
     }
 }

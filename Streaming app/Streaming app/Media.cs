@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Streaming_app
 {
-    public abstract class Media
+    public abstract class Media : IComparable
     {
         public string Title { get; set; }
         public string Producer { get; set; }
@@ -74,6 +74,15 @@ namespace Streaming_app
         public override string ToString()
         {
             return this.Title + " " + GemRating();
+        }
+        public int CompareTo(object obj)
+        {
+            if (obj == null)
+                return 1;
+            Media media = obj as Media;
+            if (media == null)
+                return 1;
+            return this.Title.CompareTo(media.Title);
         }
     }
 }

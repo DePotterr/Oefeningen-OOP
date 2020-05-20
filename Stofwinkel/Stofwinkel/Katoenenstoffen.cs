@@ -29,7 +29,7 @@ namespace Stofwinkel
         }
         public override string ToString()
         {
-            return base.ToString() + " aanduiding bio: " + GetTextBio(IsBio);
+            return base.ToString();
         }
     }
 }
